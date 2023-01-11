@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Api\Session;
 
+use App\Models\Session;
 use Illuminate\Foundation\Http\FormRequest;
 
 class IndexRequest extends FormRequest
@@ -14,7 +15,7 @@ class IndexRequest extends FormRequest
     public function rules()
     {
         return [
-            'map_name' => 'string',
+            'map_name' => 'nullable|string',
         ];
     }
 }
